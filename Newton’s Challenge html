@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Newton's Challenge</title>
+</head>
+<body style="text-align:center;font-family:Arial;">
+  
+  <h1>Newton's Challenge</h1>
+  <p>Click the button to apply force!</p>
+
+  <button onclick="moveBox()">Apply Force</button>
+
+  <div id="box" 
+       style="width:50px;height:50px;background:red;
+       position:relative;left:0;margin:20px auto;">
+  </div>
+
+  <script>
+    function moveBox() {
+      let box = document.getElementById("box");
+      let pos = parseInt(box.style.left) || 0;
+      box.style.left = pos + 50 + "px";
+    }
+  </script>
+
+</body>
+</html>
